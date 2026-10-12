@@ -9,6 +9,7 @@
  */
 
 #include <zephyr/sys/printk.h>
+#include <zephyr/sys/sys_io.h>
 #include <zephyr/kernel.h>
 #if defined(CONFIG_NRFX_CLOCK_HFCLK) &&                                                            \
 	(defined(CLOCK_FEATURE_HFCLK_DIVIDE_PRESENT) || NRF_CLOCK_HAS_HFCLK192M)

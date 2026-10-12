@@ -19,4 +19,8 @@ target_sources_ifdef(CONFIG_NRF71_RAW_DATA_TX app PRIVATE src/wifi_raw_tx_pkt_sh
 target_sources_ifdef(CONFIG_NRF70_PROMISC_DATA_RX app PRIVATE src/wifi_promiscuous_shell.c)
 target_sources_ifdef(CONFIG_NRF71_PROMISC_DATA_RX app PRIVATE src/wifi_promiscuous_shell.c)
 
+if(CONFIG_SOC_NRF7120 AND CONFIG_SHELL)
+  target_sources(app PRIVATE src/wifi_register_shell.c)
+endif()
+
 target_sources(app PRIVATE src/main.c)
